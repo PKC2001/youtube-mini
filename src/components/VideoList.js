@@ -5,8 +5,8 @@ const VideoList = ({ videos, onVideoClick }) => {
     <div>
       <ul>
         {videos.map(video => (
-          <div className='flex justify-center p-4' key={video.id} onClick={() => onVideoClick(video)}>
-            <img className='rounded-lg' width={120} src={video.submission.thumbnail} alt={video.submission.placeholder} />
+          <div className='flex justify-center p-4 cursor-pointer' key={video.id} onClick={() => onVideoClick(video)}>
+            <img className='rounded-lg w-60'src={video.submission.thumbnail} alt={video.submission.placeholder} />
           </div>
         ))}
       </ul>

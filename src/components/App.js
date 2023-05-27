@@ -38,16 +38,18 @@ const App = () => {
   return (
     <div className="bg-gray-100">
       <h1 className="text-center p-2 pb-6 text-2xl font-semibold ">Youtube Clone</h1>
-      <div className="grid grid-cols-5">
-        <div className="col-span-4">
+      <div className="grid grid-cols-1 xl:grid-cols-5">
+        <div className="xl:col-span-4">
           <VideoPlayer video={selectedVideo} />
           <div className="flex justify-center mt-4">
             <button onClick={onPrevClick} className="mr-2 text-lg font-bold">Prev</button>
             <button onClick={onNextClick} className="ml-2 text-lg font-bold">Next</button>
           </div>
         </div>
-        <div className="col-span-1">
-          <VideoList videos={videos} onVideoClick={handleVideoClick} />
+        <div className="xl:col-span-1">
+          <div>
+            <VideoList videos={videos} onVideoClick={handleVideoClick} />
+          </div>
         </div>
       </div>
     </div>
